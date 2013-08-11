@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"you are in awooded area, a chest can be seen high up a tree, to the north is woodland, to the south is woodland, to the east is dense fog, to the west is a lake.",
+	"neighbors":{"n":24, "s":22, "w":18}
+}

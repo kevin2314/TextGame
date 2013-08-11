@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"You are on a cliff area looking down you can see the land in detail, to the south is more cliff area",
+	"neighbors":{"s":, "e":6, "climb":"/Python/TextGame/rooms/5.json"}
+}

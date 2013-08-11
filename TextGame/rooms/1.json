@@ -1,0 +1,5 @@
+{	
+    "name": "Starting room",
+	"description":"You are in grassy plains, to the north are woodlands,to the east are long stretching plains, to the south and west dense fog prevents any travel",
+	"neighbors": {"n":2, "e":10}
+}

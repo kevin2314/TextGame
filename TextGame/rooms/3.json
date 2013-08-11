@@ -1,0 +1,5 @@
+{
+	"name":"wooded area",
+	"description":"You are in an area with cliffs, you cannot climb these in any way. To the north are more cliffs to your left, to the south and east are more plains. To your west there is an impassible fog. There are trees in the area.",
+	"neighbors":{"n":4, "s":2, "e":8}
+}

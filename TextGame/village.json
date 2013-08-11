@@ -1,0 +1,5 @@
+{
+	"name":"Village of Moria",
+	"description":"You enter a village that bustles with life, you look around and spot different shops that can be useful to you, there is a smithy, a stable, a general store, and an inn.",
+	"neighbors":{"leave":6, "blacksmith":"blacksmith", "smithy":"blacksmith"}
+}

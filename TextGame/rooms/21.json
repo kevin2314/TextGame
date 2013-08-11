@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"there is a big hill, a cave entrance vcan be seen here, north is woodland, to the south and to the east is impassable, to the west are plains.",
+	"neighbors":{"n":22, "w":20}
+}

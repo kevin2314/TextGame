@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":" plains, to the north is a lake, to the south is impassable fog, to the east are plains,a hill can be seen far off, to the west are plains.",
+	"neighbors":{"n":12, "e":20, "w":10}
+}

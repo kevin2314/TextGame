@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"North impassable, south are plains, east are plains, west is a village.",
+	"neighbors":{"s":14, "e":16, "w":6}
+}

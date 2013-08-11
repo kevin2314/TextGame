@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"woodlands, east , north village, west cliffs, south plains.",
+	"neighbors":{"n":6, "s":8, "e":14, "w":4}
+}

@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"Northern shore of lake, to the north is plains to thesouth is then southern shore of a lake, to the east is a wooded area to the west is the northern shore of a lake.",
+	"neighbors":{"n":17, "s":19, "e":23, "w":13}
+}

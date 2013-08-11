@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"woodlands, to the north woodlands, south woodlands east dense fog, west plains.",
+	"neighbors":{"n":25, "s":23, "w":17}
+}

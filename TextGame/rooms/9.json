@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"You are in a field, to the north are plains, to the south are plains, to the east is a lake, to the west are woodlands.",
+	"neighbors":{"n":8, "s":10, "e":11, "w":2}
+}
