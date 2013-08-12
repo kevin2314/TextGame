@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"The is an outcropping here you can see far into the distance, a big hill far to the east is especially interesting, at the base of the hill is an opening. There is a pathway up the mountain but it is blocked off for now.",
+	"neighbors":{"n":"cliff2", "climb":"mountaintop"}
+}
