@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"You enter a dungeon within a hill there are two doors in this dungeon, the one on the right reads 'Easy', and the one on the right reads 'Hard'. Which will you go through? or will you leave?",
+	"neighbors":{"leave":"21", "left":"easydoor", "right":"harddoor"}
+}
