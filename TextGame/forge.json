@@ -1,5 +1,0 @@
-{
-	"name":"What would you like to forge?",
-	"description":"THis is the cost for the items youd like to forge",
-	"neighbors":{"blacksmith":"blacksmith", "village":"leave"}
-}
