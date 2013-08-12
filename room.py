@@ -9,6 +9,8 @@ def get_room(id):
 		ret = Room(**d)
 	return ret
 
+#------------
+
 class Room():
 	def __init__(self, id=0, name='A room', description='''An empty 
 	room''', neighbors={}):
@@ -16,13 +18,17 @@ class Room():
 		self.name = name
 		self.description = description
 		self.neighbors = neighbors
-	
+
+#------------
+
 	def _neighbor(self, direction):
 		if direction in self.neighbors:
 			return self.neighbors[direction]
 		else:
 			return None
-	
+			
+#------------
+# these commands are what the jsontext refer to 	
 	def north(self):
 		return self._neighbor('n')
 
