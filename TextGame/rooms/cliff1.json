@@ -1,5 +1,5 @@
 {
 	"name":"",
 	"description":"You are on a cliff area looking down you can see the land in detail, to the south is more cliff area",
-	"neighbors":{"n":"cliff2", "climb":"5"}
+	"neighbors":{"n":"cliff2", "s":"cliff2", "climb":"5"}
 }
