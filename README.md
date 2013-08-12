@@ -8,9 +8,14 @@ function in python 3, I'm still learning how to use the cmd function in python s
 
 Things to do:
 -------------
-1.) Finish adding a mountain cliff region
+1.) Finished adding a mountain cliff region
 
-2.) Add a dungeon with initial descriptions and movement
+2.) Adding a dungeon with initial descriptions and movement
+	I will be continually adding this to the game, I have some ideas about
+	creating a way to randomize the rooms to the dungeon so that jgetting to 
+	the treasure will never be the same, also adding a way to exit dungeons
+	quickly like a teleporting item or something similar willo be added in 
+	the case that you are lost or dont feel like walking out.
 
 3.) Implement an inventory to call on command, take things out and sell things from.
 
