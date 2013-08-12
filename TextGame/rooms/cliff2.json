@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"There is a mining point in the area, to the south is an outcropping, and a pathway up the mountains.",
+	"neighbors":{"n":"cliff1", "s":"cliff3"}
+}
