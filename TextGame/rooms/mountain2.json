@@ -1,0 +1,5 @@
+{
+	"name":"",
+	"description":"You are on a foot path it leads up the mountain to the west, a small house can be seen. To the south you can climb down the mountain.",
+	"neighbors":{"s":"mountain", "w":"mountain3"}
+}

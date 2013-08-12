@@ -1,5 +1,5 @@
 {
-	"name":""
-	"description":"You are on the mountain top, to the north a foot path cav be seen, above you is a ledge with an entrance, you cannot reach this. you can climb down the mountain from here."
-	"neighbors":{"climb":"cliff3", "n":"mountain2"}
+	"name":"",
+	"description":"You are on the mountain top, to the north a foot path cav be seen, above you is a ledge with an entrance, you cannot reach this. you can climb down the mountain from here.",
+	"neighbors":{"n":"mountain2", "climb":"cliff3"}
 }
