@@ -2,7 +2,7 @@ import json
 
 def get_inventory(id):
 	ret = None
-	with open('/home/family/Python/TextGame/inventory/1.json', 'r') as f:
+	with open('TextGame/inventory/1.json', 'r') as f:
 		jsontext = f.read()
 		d = json.loads(jsontext)
 		d['id'] = id
