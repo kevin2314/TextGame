@@ -70,9 +70,9 @@ class Game(cmd.Cmd):
 		'''Climbs where possible'''
 		self.climb('climb')
 	
-	def do_village(self, args):
-		'''Enters Village'''
-		self.move('village')
+	def do_enter(self, args):
+		'''Enters rooms, Villages, and caves where possible'''
+		self.move('enter')
 	
 	def do_smithy(self, args):
 		'''Enters Blacksmith'''

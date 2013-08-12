@@ -2,7 +2,7 @@ import json
 
 def get_room(id):
 	ret = None
-	with open('TextGame/rooms/'+str(id)+'.json', 'r') as f:
+	with open('rooms/'+str(id)+'.json', 'r') as f:
 		jsontext = f.read()
 		d = json.loads(jsontext)
 		d['id'] = id
@@ -35,14 +35,11 @@ class Room():
 	def west(self):
 		return self._neighbor('w')
 	
-	def climb_up(self):
-		return self._neighbor('climb up')
-	
-	def climb_down(self):
-		return self._neighbor('climb down')
-	
-	def village(self):
-		return self._neighbor('village')
+	def climb(self):
+		return self._neighbor('climb')
+
+	def enter(self):
+		return self._neighbor('enter')
 	
 	def blacksmith(self):
 		return self._neighbor('blacksmith')
