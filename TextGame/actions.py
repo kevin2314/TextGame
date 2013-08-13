@@ -1,23 +1,19 @@
 
-	
-class Actions():
-	
-	def __init__(self, actions):
-		self.actions = actions
-		
-	def _actions(self, do)
-		if do in self.actions:
-			return self.actions[do]
-		else:
-			return None
-	def forge(self):
-		self._action('forge')
-		
-	
-	def buy(self):
-		self._action('forge')
 
-	def sell(self):
-		self.action('forge')
-		
+def get_action(action):
+    action = Actions()
+    return action
+
+
+class Actions():
+
+    def __init__(self, action):
+        super(Actions, self).__init__()
+        self.action = action
+
+    def _actions(self, cmd):
+        if cmd in self.action:
+            return self.action[cmd]
+        else:
+            return None
 
