@@ -1,5 +1,0 @@
-{
-	"name":"Blacksmith",
-	"description":"You enter the smithy, the Blacksmith hollers 'Welcome in what would you like to do?? I can buy relevent items off of you or I can make you an item from resources that you bring to me' the village is outside",
-	"neighbors":{"leave":"village", "sell":"sell", "forge":"forge"}
-}
