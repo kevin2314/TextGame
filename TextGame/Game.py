@@ -3,6 +3,7 @@
 import cmd
 from room import get_room
 from actions import get_action
+import inventory
 import textwrap
 
 
@@ -28,7 +29,7 @@ west, typing these will move you to next area, when possible you may also climb
 up or down simply by typing climb. At any moment in the game you can type help
 and a list of all the commands in the game will be shown, as well as when you
 type help and an action i.e "help north" a short description of what this
-command does will be given'''
+command does will be given.'''
 
 print(intro)
 print('')
@@ -47,6 +48,7 @@ class Game(cmd.Cmd):
 
         cmd.Cmd.__init__(self)
         #self.get = get_action(action)
+        self.inv = Inventory()
         self.loc = get_room('village')
         self.look()
 
@@ -68,14 +70,12 @@ class Game(cmd.Cmd):
         for line in textwrap.wrap(self.loc.description, 72):
             print(line)
 
-    def check(self):
-        newaction = self.get
 #-----------------------------------------------------------------------
 #commands
 
     def do_inventory(self, args):
         '''Checks Inventory'''
-        self.check(inventory)
+        print(self.inv)
 
     def do_n(self, args):
         '''goes north'''
