@@ -7,7 +7,7 @@ import inventory
 import textwrap
 
 
-intro = '''As you come to from a sleep that certaintly didn't feel welcomed,
+intro = textwrap.wrap('''As you come to from a sleep that certaintly didn't feel welcomed,
 you notice you are in a strange bed, you think to yourself "This is'nt my bed."
 you look around the room and nothing is familiar to you, as you get up the
 clothes you wear are not familiar to you eithre, at this point you get up and
@@ -21,7 +21,7 @@ way home, the problem is that the nearest town from hereis a journey of about
 two months on foot." so will you stay here or find your way home? Will you
 simply stay and forge a living? Do you have family? Maybe you can find some
 clues that offer an explanation to all of this. you leave the inn and find a
-town bustling nows where your adventure starts.'''
+town bustling nows where your adventure starts.''') 
 
 controls = '''When you begin playing this game, there are a few commands
 available to you, starting with movement, you can move north, south, east, and
