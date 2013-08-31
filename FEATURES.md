@@ -1,5 +1,7 @@
 TextGame to do list and upcoming features. 
 
+  Feature      Version release   Projeced Date
+ 
 Inventory    |        0.2       |  9/20/2013  |
 
 Actions      |        0.2       |  9/20/2013  |
