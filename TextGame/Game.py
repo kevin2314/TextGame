@@ -75,7 +75,8 @@ class Game(cmd.Cmd):
 
     def do_inventory(self, args):
         '''Checks Inventory'''
-        print(self.inv)
+        for i in inventory.bag:
+        	print(i)
 
     def do_n(self, args):
         '''goes north'''

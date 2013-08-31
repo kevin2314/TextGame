@@ -6,11 +6,11 @@ class Inventory(object):
 
         self.slots = slots
 
-	def bag(self):
+    def bag(self):
 	
-		slot = [
+        slot = [
 					['Slot 1', 0]
 					['Slot 2', 0]
-					]
+               ]
 		
 		
