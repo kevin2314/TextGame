@@ -7,7 +7,7 @@ from inventory import Inventory
 import textwrap
 
 
-intro = textwrap.wrap('''As you come to from a sleep that certaintly didn't feel welcomed,
+intro = '''As you come to from a sleep that certaintly didn't feel welcomed,
 you notice you are in a strange bed, you think to yourself "This is'nt my bed."
 you look around the room and nothing is familiar to you, as you get up the
 clothes you wear are not familiar to you eithre, at this point you get up and
@@ -21,15 +21,15 @@ way home, the problem is that the nearest town from hereis a journey of about
 two months on foot." so will you stay here or find your way home? Will you
 simply stay and forge a living? Do you have family? Maybe you can find some
 clues that offer an explanation to all of this. you leave the inn and find a
-town bustling nows where your adventure starts.''') 
+town bustling nows where your adventure starts.'''
 
-controls = textwrap.wrap('''When you begin playing this game, there are a few commands
+controls = '''When you begin playing this game, there are a few commands
 available to you, starting with movement, you can move north, south, east, and
 west, typing these will move you to next area, when possible you may also climb
 up or down simply by typing climb. At any moment in the game you can type help
 and a list of all the commands in the game will be shown, as well as when you
 type help and an action i.e "help north" a short description of what this
-command does will be given.''')
+command does will be given.'''
 
 print(intro)
 print('')
@@ -51,7 +51,7 @@ class Game(cmd.Cmd):
         self.loc = get_room('village')
         self.look()
         self.inventory = Inventory()
-        self.action = Actions() 
+        #self.action = Actions() 
 #------------------------------------------------------------------------
 #This checks which room you are in if you can go the way for the command
 #given and prints out your location
@@ -72,10 +72,19 @@ class Game(cmd.Cmd):
 
 #-----------------------------------------------------------------------
 #commands
-
+    
+    def do_grab(self, args):
+	'''picks up items'''
+	pass
+    
+    def do_look(self, args):
+        '''Prints the current area you are in'''
+        self.look()
     def do_inventory(self, args):
         '''Checks Inventory'''
-        print(self.inventory.bag())
+        self.inventory.bag()
+        self.look()
+        
 
     def do_n(self, args):
         '''goes north'''
@@ -121,6 +130,7 @@ class Game(cmd.Cmd):
         '''Quits the game'''
         print("thank you for playing")
         return True
+    
 
 if __name__ == '__main__':
     g = Game()
