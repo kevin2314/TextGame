@@ -2,7 +2,7 @@
 
 import cmd
 from room import get_room
-from actions import get_action
+from actions import Actions
 from inventory import Inventory
 import textwrap
 
@@ -48,9 +48,10 @@ class Game(cmd.Cmd):
 
         cmd.Cmd.__init__(self)
         #self.get = get_action(action)
-	self.loc = get_room('village')
+        self.loc = get_room('village')
         self.look()
-	self.inventory = Inventory()
+        self.inventory = Inventory()
+        self.action = Actions() 
 #------------------------------------------------------------------------
 #This checks which room you are in if you can go the way for the command
 #given and prints out your location
@@ -74,7 +75,7 @@ class Game(cmd.Cmd):
 
     def do_inventory(self, args):
         '''Checks Inventory'''
-	print(self.inventory.bag())
+        print(self.inventory.bag())
 
     def do_n(self, args):
         '''goes north'''
