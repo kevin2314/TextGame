@@ -6,8 +6,5 @@ a simple world layed out that you can move around in, I'll be working on adding 
 I'll be making a list of things to be done and knocking them out succesivley, I've programmed my game using the cmd
 function in python 3, I'm still learning how to use the cmd function in python so it will be improved later on.
 
-Things to do:
--------------
-I'll now be listing future features in my FEATURES so check that out for upcoming features.
--------------
+For further information check out the wiki pages for future features, and general information.
 
