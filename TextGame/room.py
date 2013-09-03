@@ -3,7 +3,7 @@ import json
 
 def get_room(id):
     ret = None
-    with open('rooms/' + str(id) + '.json', 'r') as f:
+    with open(str(id) + '.json', 'r') as f:
         jsontext = f.read()
         d = json.loads(jsontext)
         d['id'] = id
@@ -12,7 +12,7 @@ def get_room(id):
 
 
 class Room():
-    def __init__(self, id=0, name='A room', description='''An empty room''',
+    def __init__(self, id=0, name = 'A room', description = 'An empty room',
         neighbors={}):
         self.id = id
         self.name = name

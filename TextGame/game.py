@@ -2,7 +2,6 @@
 
 import cmd
 from room import get_room
-from actions import Actions
 from inventory import Inventory
 import textwrap
 
