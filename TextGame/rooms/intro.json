@@ -1,0 +1,5 @@
+{
+	"name":"intro",
+	"description":"enjoy the game, this is a place holder until I can get back to my computer for the actual intro.",
+	"neighbors":{"next":"controls"}
+} 
