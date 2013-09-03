@@ -1,0 +1,5 @@
+{
+	"name": "controls",
+	"description": "   When you begin playing this game, there are a few commands available to you, starting with movement, you can move north, south, east, and west, typing these will move you to next area, when possible you may also climb up or down simply by typing climb. At any moment in the game you can type help and a list of all the commands in the game will be shown, as well as when you type help and an action i.e 'help north' a short description of what this command does will be given.                    Type 'next' to continue.",
+	"neighbors":{"next":"village"}
+}
