@@ -4,9 +4,11 @@ import os
 
 def get_room(id):
     ret = None
-    with open('rooms/' + str(id) + '.json', 'r') as f:
-        #jsontext = f.read()
-        d = json.loads(f.read())
+    with open(os.path.join(
+             os.path.dirname(__file__), 'rooms/' + str(id) + '.json'),
+          'r') as f:
+        jsontext = f.read()
+        d = json.loads(jsontext)
         d['id'] = id
         ret = Room(**d)
     return ret
