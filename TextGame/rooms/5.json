@@ -1,5 +1,5 @@
 {
 	"name":"",
-	"description":"pathway up cliffs, village east, fog north and west",
+	"description":"Pathway up cliffs, village east, fog north and west",
 	"neighbors":{"s":4, "e":6, "climb":"cliff1"}
 }

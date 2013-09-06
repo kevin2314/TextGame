@@ -1,5 +1,5 @@
 {
 	"name":"",
-	"description":" plains, to the north and east is dense fog, to the south is woodlands to the west is planis.",
+	"description":" Plains, to the north and east is dense fog, to the south is woodlands to the west is plains.",
 	"neighbors":{"s":24, "w":16}
 }

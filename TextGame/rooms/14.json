@@ -1,5 +1,5 @@
 {
 	"name":"",
-	"description":"plains, north plains, south lake, to the east and west are plains.",
+	"description":"Plains, north plains, south lake, to the east and west are plains.",
 	"neighbors":{"n":15, "s":13, "e":17, "w":7}
 }

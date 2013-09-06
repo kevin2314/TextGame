@@ -1,5 +1,5 @@
 {
 	"name":"",
-	"description":"there is a village in the area, to the west are cliffs, to the east and south are plains",
+	"description":"There is a village in the area, to the west are cliffs, to the east and south are plains",
 	"neighbors":{"s":7, "e":15, "w":5, "enter":"village"}
 }

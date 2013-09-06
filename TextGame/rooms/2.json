@@ -1,5 +1,5 @@
 {
 	"name":"Woodlands",
-	"description":"Woodede Area",
+	"description":"Wooded Area",
 	"neighbors":{"n": 3, "s": 1, "e":9}
 }
