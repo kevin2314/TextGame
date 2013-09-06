@@ -1,5 +1,5 @@
 {
-	"name":"intro",
-	"description":"enjoy the game, this is a place holder until I can get back to my computer for the actual intro. Please type 'next' to continue.",
+	"name":"Intro",
+	"description":"   As you come to from a sleep that certaintly didn't feel welcomed, you notice you are in a strange bed, you think to yourself 'This is'nt my bed.' you look around the room and nothing is familiar to you, as you get up the clothes you wear are not familiar to you eithre, at this point you get up and stumble out of bed, as you exit the room you notice you are in an inn by the people around and the obvious clerk at a counter. 'Why hello there stranger' the clerk blurts out in a loud voice, as you look at him he explains 'Your confused look tells me your not from around here... or the fact that the man who brought you in here said he found you nude beaten and unconcious on the road... anyways you're welcome to stay here till you think you can find your way home, the problem is that the nearest town from here is a journey of about two months on foot.' so will you stay here or find your way home? Will you simply stay and forge a living? Do you have family? Maybe you can find some clues that offer an explanation to all of this. you leave the inn and find a town bustling nows where your adventure starts.             Type 'next' to continue.",
 	"neighbors":{"next":"controls"}
-} 
+}
