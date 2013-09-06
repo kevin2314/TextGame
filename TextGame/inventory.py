@@ -1,4 +1,4 @@
-
+from collections import OrderedDict
 
 class Inventory(object):
 
@@ -14,10 +14,10 @@ class Inventory(object):
                               'slot 3':0		      
                      }
 		
-		sorted = self.slots.items()
-		sorted.sort()
-		for k, v in sorted:
-			print k, v
+		sort = sorted(self.slots.items())
+		
+		for k, v in sort:
+			print(k, v)
 		
 		return ' '
 	
