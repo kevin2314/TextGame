@@ -1,5 +1,5 @@
 {
 	"name":"",
-	"description":"PLains, to the north east and west are plains to the south is the northern shore of a lake.",
+	"description":"Plains, to the north east and west are plains to the south is the northern shore of a lake.",
 	"neighbors":{"n":16, "s":18, "e":24, "w":14}
 }
