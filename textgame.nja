@@ -1,0 +1,29 @@
+{
+  "mainFile": "TextGame/game.py", 
+  "use-tabs": false, 
+  "venv": "", 
+  "relatedProjects": [], 
+  "name": "TextGame", 
+  "license": "", 
+  "url": "", 
+  "pythonPath": "/usr/bin/python3", 
+  "preExecScript": "", 
+  "additional_builtins": [], 
+  "programParams": "", 
+  "indentation": 4, 
+  "PYTHONPATH": "", 
+  "supported-extensions": [
+    ".py", 
+    ".html", 
+    ".jpg", 
+    ".png", 
+    ".ui", 
+    ".css", 
+    ".json", 
+    ".js", 
+    ".ini"
+  ], 
+  "project-type": "Text based Game", 
+  "postExecScript": "", 
+  "description": ""
+}

@@ -4,10 +4,14 @@ import cmd
 from room import get_room
 from inventory import Inventory
 import textwrap
+import actions
 
+
+hand = ' '
 
 
 class Game(cmd.Cmd):
+    global hand
     prompt = '> '
 
     def __init__(self):
@@ -15,16 +19,18 @@ class Game(cmd.Cmd):
 #Here the game is initialized asking for commands via the Cmd module,
 #the variables given are the first room you start in and prints out the
 #location
-		
+
         cmd.Cmd.__init__(self)
-        #self.get = get_action(action)
         self.loc = get_room('intro')
         self.look()
         self.inventory = Inventory()
-        #self.action = Actions() 
+        self.action = actions.Actions()
+        self.hand = hand
+
 #------------------------------------------------------------------------
 #This checks which room you are in if you can go the way for the command
 #given and prints out your location
+
     def move(self, dir):
         newroom = self.loc._neighbor(dir)
         if newroom is None:
@@ -43,12 +49,11 @@ class Game(cmd.Cmd):
 #-----------------------------------------------------------------------
 #commands
 #movement
-	
-	
+
     def do_n(self, args):
         '''goes north'''
         self.move('n')
-	
+
     def do_s(self, args):
         '''goes south'''
         self.move('s')
@@ -72,17 +77,30 @@ class Game(cmd.Cmd):
     def do_leave(self, args):
         '''Exits the current room'''
         self.move('leave')
-        
-#prompts      
- 	
+
+#prompts
+
+    def do_hand(self, args):
+        '''Prints what is in hand'''
+        print((self.hand))
+
+    def do_get(self, args):
+        '''Gets items from bag'''
+        self.item = input('What would you like to '
+        'get from your sack?> ')
+        for self.item in self.inventory:
+            self.hand = self.item
+        else:
+            return 'You do not have this item'
+
     def do_next(self, args):
-		'''Gets the next event'''
-		self.move('next')
-    
+        '''Gets the next event'''
+        self.move('next')
+
     def do_look(self, args):
         '''Prints the current area you are in'''
         self.look()
-    
+
     def do_inventory(self, args):
         '''Checks Inventory'''
         self.inventory.bag()
@@ -92,7 +110,6 @@ class Game(cmd.Cmd):
         '''Quits the game'''
         print("thank you for playing")
         return True
-    
 
 if __name__ == '__main__':
     g = Game()
