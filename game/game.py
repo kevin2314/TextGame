@@ -7,11 +7,7 @@ import textwrap
 import actions
 
 
-hand = ' '
-
-
 class Game(cmd.Cmd):
-    global hand
     prompt = '> '
 
     def __init__(self):
@@ -25,7 +21,6 @@ class Game(cmd.Cmd):
         self.look()
         self.inventory = Inventory()
         self.action = actions.Actions()
-        self.hand = hand
 
 #------------------------------------------------------------------------
 #This checks which room you are in if you can go the way for the command
@@ -83,15 +78,6 @@ class Game(cmd.Cmd):
     def do_hand(self, args):
         '''Prints what is in hand'''
         print((self.hand))
-
-    def do_get(self, args):
-        '''Gets items from bag'''
-        self.item = input('What would you like to '
-        'get from your sack?> ')
-        for self.item in self.inventory:
-            self.hand = self.item
-        else:
-            return 'You do not have this item'
 
     def do_next(self, args):
         '''Gets the next event'''
