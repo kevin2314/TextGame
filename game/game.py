@@ -3,8 +3,8 @@
 import cmd
 from room import get_room
 from inventory import Inventory
+from player import Player
 import textwrap
-import actions
 
 
 class Game(cmd.Cmd):
@@ -20,7 +20,7 @@ class Game(cmd.Cmd):
         self.loc = get_room('intro')
         self.look()
         self.inventory = Inventory()
-        self.action = actions.Actions()
+        self.player = Player()
 
 #------------------------------------------------------------------------
 #This checks which room you are in if you can go the way for the command
@@ -74,6 +74,10 @@ class Game(cmd.Cmd):
         self.move('leave')
 
 #prompts
+
+    def do_name(self, args):
+        '''Prints the users name if there is one'''
+        self.player.player_name()
 
     def do_hand(self, args):
         '''Prints what is in hand'''
