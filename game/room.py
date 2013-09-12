@@ -15,10 +15,11 @@ def get_room(id):
 
 
 class Room():
-    def __init__(self, id=0, name='A room', description='An empty room',
-        neighbors={}):
+    def __init__(self, id=0, name='A room', objects={},
+        description='An empty room', neighbors={}):
         self.id = id
         self.name = name
+        self.objects = objects
         self.description = description
         self.neighbors = neighbors
 
