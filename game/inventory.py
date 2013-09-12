@@ -4,24 +4,21 @@ import itemlib
 class Inventory(object):
 
     def __init__(self, slots={}):
-        self.call = itemlib.Items()
+        self.lib = itemlib.Items()
         self.slots = slots
 
     def bag(self):
-
         self.slots = {
-                         self.call.item_id(1): 1
+                          'wood': 0,
+                          'stone': 0,
+                          'dirt': 0,
+                          'gravel': 0,
+                          'water': 0,
+                          'wooden axe': 0,
+                          'wooden sword': 0,
+                          'stone axe': 0,
+                          'stone sword': 0
                      }
-
-        sort = sorted(self.slots.items())
-        for k, v in sort:
-            if k == 0:
-                if v == 0:
-                    print('empty')
-                else:
-                    print(v)
-            if v == 0:
-                print('empty')
-            else:
-                print((k, v))
+        for k, v in sorted(self.slots.items()):
+            print((k, v))
         return ' '
