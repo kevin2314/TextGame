@@ -8,3 +8,4 @@ function in python 3, I'm still learning how to use the cmd function in python s
 
 For further information check out the wiki pages for future features, and general information.
 
+link: www.github.com/kevin2314/TextGame/wiki
