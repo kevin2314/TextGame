@@ -1,8 +1,8 @@
 
 
+from inventory import Inventory
 import cmd
 from room import get_room
-from inventory import Inventory
 from player import Player
 import textwrap
 
@@ -25,6 +25,8 @@ class Game(cmd.Cmd):
 #------------------------------------------------------------------------
 #This checks which room you are in if you can go the way for the command
 #given and prints out your location
+    def emptyline(self):
+        pass
 
     def move(self, dir):
         newroom = self.loc._neighbor(dir)
@@ -65,6 +67,13 @@ class Game(cmd.Cmd):
         '''Climbs where possible'''
         self.move('climb')
 
+    def do_get(self, args):
+        '''Gets items from an area or from your bag'''
+        if self.inventory.slots[args] > 0:
+            self.player.right_hand(args)
+        else:
+            print('You do not have this item')
+
     def do_enter(self, args):
         '''Enters rooms, Villages, and caves where possible'''
         self.move('enter')
@@ -73,6 +82,10 @@ class Game(cmd.Cmd):
         '''Exits the current room'''
         self.move('leave')
 
+    def help_get(self):
+        print('''If you are trying to grab an item out from your bag type get
+followed by the item in your bag, this applys to items in an are
+a as well''')
 #prompts
 
     def do_name(self, args):
@@ -81,7 +94,7 @@ class Game(cmd.Cmd):
 
     def do_hand(self, args):
         '''Prints what is in hand'''
-        print((self.hand))
+        print((self.player.print_hand()))
 
     def do_next(self, args):
         '''Gets the next event'''
