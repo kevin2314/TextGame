@@ -1,10 +1,10 @@
-import inventory
+from inventory import Inventory
 
 
 class Player(object):
 
     def __init__(self):
-        self.inv = inventory
+        self.inv = Inventory()
 
 #Naming your player for a nice personal toouch, when saving is implemented
 #this will be save as well.
@@ -34,5 +34,5 @@ class Player(object):
 class Actions(Player):
 
     def __init__(self):
-        self.inventory = inventory
+        self.inventory = Inventory()
         self.player = Player()
