@@ -5,6 +5,7 @@ import cmd
 from room import get_room
 from player import Player
 import textwrap
+#import time
 
 
 class Game(cmd.Cmd):
@@ -28,6 +29,14 @@ class Game(cmd.Cmd):
     def emptyline(self):
         pass
 
+    def objects(self, args):
+        objects = self.loc._objects(args)
+        if objects is None:
+            print(('Ther are no %s in the area' % args))
+            self.look()
+        else:
+            self.look()
+
     def move(self, dir):
         newroom = self.loc._neighbor(dir)
         if newroom is None:
@@ -39,9 +48,9 @@ class Game(cmd.Cmd):
 
     def look(self):
         print((self.loc.name))
-        print('')
         for line in textwrap.wrap(self.loc.description, 72):
             print(line)
+        print('')
 
 #-----------------------------------------------------------------------
 #commands
@@ -83,10 +92,14 @@ class Game(cmd.Cmd):
         self.move('leave')
 
     def help_get(self):
-        print('''If you are trying to grab an item out from your bag type get
-followed by the item in your bag, this applys to items in an are
-a as well''')
+        for i in (textwrap.wrap('''   If you are trying to grab an item out from
+your bag type get followed by the item in your bag, this applys to
+items in an area as well''', 72)):
+            print(('', i))
 #prompts
+
+    def do_chop(self, args):
+        self.objects('trees')
 
     def do_name(self, args):
         '''Prints the users name if there is one'''

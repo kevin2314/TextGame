@@ -14,6 +14,14 @@ def get_room(id):
     return ret
 
 
+def grab_object(objects):
+    objects = None
+    if objects in Room(objects):
+        return objects
+    else:
+        return 0
+
+
 class Room():
     def __init__(self, id=0, name='A room', objects={},
         description='An empty room', neighbors={}):
@@ -29,29 +37,8 @@ class Room():
         else:
             return None
 
-    def north(self):
-        return self._neighbor('n')
-
-    def south(self):
-        return self._neighbor('s')
-
-    def east(self):
-        return self._neighbor('e')
-
-    def west(self):
-        return self._neighbor('w')
-
-    def climb(self):
-        return self._neighbor('climb')
-
-    def enter(self):
-        return self._neighbor('enter')
-
-    def blacksmith(self):
-        return self._neighbor('blacksmith')
-
-    def forge(self):
-        return self._neighbor('forge')
-
-    def leave(self):
-        return self._neighbor('leave')
+    def _objects(self, arg):
+        if arg in self.objects:
+            return self.objects[arg]
+        else:
+            return None

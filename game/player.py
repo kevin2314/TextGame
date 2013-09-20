@@ -29,10 +29,3 @@ class Player(object):
         except:
             return 'There is nothing in hand'
         return ''
-
-
-class Actions(Player):
-
-    def __init__(self):
-        self.inventory = Inventory()
-        self.player = Player()
