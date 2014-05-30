@@ -32,7 +32,7 @@ class Game(cmd.Cmd):
     def objects(self, args):
         objects = self.loc._objects(args)
         if objects is None:
-            print(('Ther are no %s in the area' % args))
+            print(('Ther are no ' + repr(args) + ' in the area' ))
             self.look()
         else:
             self.look()

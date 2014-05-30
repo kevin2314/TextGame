@@ -13,7 +13,7 @@ class Player(object):
      	self.name = input('Would you like to give yourself a name?> ')
        		print((self.name))
 		else:
-     	print((('Your name is %s.') % self.name))
+     	print((('Your name is ' + repr(self.name))))
 
 #The importance what hand you are will be important later on.
 
