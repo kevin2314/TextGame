@@ -4,6 +4,7 @@ from room import get_room
 from player import Player
 import textwrap
 import time
+import random
 
 
 class Controls(cmd.Cmd):
@@ -18,6 +19,7 @@ class Controls(cmd.Cmd):
         cmd.Cmd.__init__(self)
         self.loc = get_room('intro')
         self.look()
+        self.pos()
         self.event = Events()
         self.inventory = Inventory()
         self.Player = Player()
@@ -45,8 +47,12 @@ class Controls(cmd.Cmd):
             self.loc = get_room(newroom)
             self.look()
 
+    def pos(self):
+        
+        position = self.loc.name
+    
     def look(self):
-        print((self.loc.name))
+#       print((self.loc.name))
         for line in textwrap.wrap(self.loc.description, 72):
             print(line)
         print('')
@@ -97,8 +103,8 @@ items in an area as well''', 72)):
             print(('', i))
 #prompts
 	  
-	  def do_sky(self, args):
-	      self.event.sky()
+    def do_sky(self, args):
+        self.event.sky()
 	  
     def do_time(self, args):
         self.event.timeOfDay()
@@ -134,7 +140,9 @@ items in an area as well''', 72)):
         '''Quits the game'''
         print("thank you for playing")
         return True
-        
+    
+''' def do_pos(self, args):
+        print(self.loc.name) '''
 
 class Events(object):
 	
@@ -143,18 +151,30 @@ class Events(object):
 	# I'm thinking of making this games time as the same as the system time.
 	
 	def __init__(self):
+		self.room = Controls.pos
 		self.time = time
-		
+
 	def timeOfDay(self):
 		print('The time is ' + time.strftime('%I:%M %p'))
 	
 	def sky(self):
+		timeInInt = int(time.strftime("%I"))
+		timeInAmPm = time.strftime("%p")
 		
-		if time.strftime('%p') == 'AM':
-			print("it is day time, there is slight cloud coverage"):
-		elif time.strftime('%p') == 'PM' && time.strftime('%H') > '6':
-			print('it is evening')
+		if timeInAmPm == 'AM':
+			print("It is morning")
+		elif timeInAmPm == 'PM':
+			if timeInInt <= 5:
+				print("It is afternoon")
+			elif timeInInt > 5 & timeInInt <= 11:
+				print("It is night")
+	#-------------------------------------------------
+	# creature spawning
+	
+	def spawAtPos(self):
+		
+			
 
 if __name__ == '__main__':
-    c = Controls()
-    c.cmdloop()
+	c = Controls()
+	c.cmdloop()
