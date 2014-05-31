@@ -1,14 +1,12 @@
-
-
 from inventory import Inventory
 import cmd
 from room import get_room
 from player import Player
 import textwrap
-#import time
+import time
 
 
-class Game(cmd.Cmd):
+class Controls(cmd.Cmd):
     prompt = '> '
 
     def __init__(self):
@@ -20,6 +18,7 @@ class Game(cmd.Cmd):
         cmd.Cmd.__init__(self)
         self.loc = get_room('intro')
         self.look()
+        self.event = Events()
         self.inventory = Inventory()
         self.Player = Player()
 
@@ -97,7 +96,10 @@ your bag type get followed by the item in your bag, this applys to
 items in an area as well''', 72)):
             print(('', i))
 #prompts
-
+	  
+    def do_time(self, args):
+        self.event.timeOfDay()
+	  
     def do_chop(self, args):
         self.objects('trees')
 
@@ -129,6 +131,19 @@ items in an area as well''', 72)):
         '''Quits the game'''
         print("thank you for playing")
         return True
+        
+
+class Events(object):
+	
+	# In this events class we will handle all game events such as time,
+	# spawning of monsters, and possibly special event occurenses based on date, time of day
+	# I'm thinking of making this games time as the same as the system time.
+	
+	def __init__(self, time):
+		self.time = time
+		
+	def timeOfDay(self, args):
+		print(gettimeofday())
 
 if __name__ == '__main__':
     g = Game()
