@@ -1,14 +1,12 @@
-
-
 from inventory import Inventory
 import cmd
 from room import get_room
 from player import Player
 import textwrap
-#import time
+import time
 
 
-class Game(cmd.Cmd):
+class Controls(cmd.Cmd):
     prompt = '> '
 
     def __init__(self):
@@ -20,8 +18,9 @@ class Game(cmd.Cmd):
         cmd.Cmd.__init__(self)
         self.loc = get_room('intro')
         self.look()
+        self.event = Events()
         self.inventory = Inventory()
-        self.player = Player()
+        self.Player = Player()
 
 #------------------------------------------------------------------------
 #This checks which room you are in if you can go the way for the command
@@ -32,7 +31,7 @@ class Game(cmd.Cmd):
     def objects(self, args):
         objects = self.loc._objects(args)
         if objects is None:
-            print(('Ther are no %s in the area' % args))
+            print(('Ther are no ' + repr(args) + ' in the area' ))
             self.look()
         else:
             self.look()
@@ -97,7 +96,10 @@ your bag type get followed by the item in your bag, this applys to
 items in an area as well''', 72)):
             print(('', i))
 #prompts
-
+	  
+    def do_time(self, args):
+        self.event.timeOfDay()
+	  
     def do_chop(self, args):
         self.objects('trees')
 
@@ -107,7 +109,10 @@ items in an area as well''', 72)):
 
     def do_hand(self, args):
         '''Prints what is in hand'''
-        print((self.player.print_hand()))
+        if self.Player.hand() == ' ':
+        	print("You are not holding anything")
+        else:
+        	print(self.Player.hand())
 
     def do_next(self, args):
         '''Gets the next event'''
@@ -126,7 +131,20 @@ items in an area as well''', 72)):
         '''Quits the game'''
         print("thank you for playing")
         return True
+        
+
+class Events(object):
+	
+	# In this events class we will handle all game events such as time,
+	# spawning of monsters, and possibly special event occurenses based on date, time of day
+	# I'm thinking of making this games time as the same as the system time.
+	
+	def __init__(self):
+		self.time = time
+		
+	def timeOfDay(self):
+		print('The time is ' + time.strftime('%I:%M %p'))
 
 if __name__ == '__main__':
-    g = Game()
-    g.cmdloop()
+    c = Controls()
+    c.cmdloop()
