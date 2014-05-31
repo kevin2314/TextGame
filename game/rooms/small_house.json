@@ -1,5 +1,5 @@
 {
-	"name":"",
+	"name":"mountain house",
 	"description":"You are in a small house, there is a man sitting at a table in the center of the room, he speaks:'Well hello there stranger make yourself at home, it's not often I get visitors here in the mountains, when I do I always welcome them back at anytime, right now I can't do much for you but maybe in the future.'",
 	"neighbors":{"leave":"mountain3"}
 }

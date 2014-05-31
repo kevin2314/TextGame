@@ -46,6 +46,7 @@ class Controls(cmd.Cmd):
         else:
             self.loc = get_room(newroom)
             self.look()
+            event.spawnAtPos()
 
     def pos(self):
         
@@ -172,6 +173,15 @@ class Events(object):
 	# creature spawning
 	
 	def spawAtPos(self):
+		
+		chance = random.randrange(100)
+		
+		for i in chance:
+			if i <= 49:
+				print("There is a monster in the area")
+			else:
+				print("The area seems safe for now")
+				
 		
 			
 
