@@ -97,6 +97,9 @@ items in an area as well''', 72)):
             print(('', i))
 #prompts
 	  
+	  def do_sky(self, args):
+	      self.event.sky()
+	  
     def do_time(self, args):
         self.event.timeOfDay()
 	  
@@ -144,6 +147,13 @@ class Events(object):
 		
 	def timeOfDay(self):
 		print('The time is ' + time.strftime('%I:%M %p'))
+	
+	def sky(self):
+		
+		if time.strftime('%p') == 'AM':
+			print("it is day time, there is slight cloud coverage"):
+		elif time.strftime('%p') == 'PM' && time.strftime('%H') > '6':
+			print('it is evening')
 
 if __name__ == '__main__':
     c = Controls()
