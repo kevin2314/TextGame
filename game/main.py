@@ -46,7 +46,7 @@ class Controls(cmd.Cmd):
         else:
             self.loc = get_room(newroom)
             self.look()
-            event.spawnAtPos()
+ #           event.spawnAtPos()
 
     def pos(self):
         
@@ -73,6 +73,7 @@ class Controls(cmd.Cmd):
     def do_e(self, args):
         '''goes east'''
         self.move('e')
+        self.move('east')
 
     def do_w(self, args):
         '''goes west'''
